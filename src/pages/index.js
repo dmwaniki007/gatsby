@@ -151,7 +151,7 @@ const IndexPage = () => {
           </a>
         </li>
 
-        //here we loop through the links array we created up there
+        console.log(here we loop through the links array we created up there);
         
         {links.map(link => (
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
@@ -160,7 +160,7 @@ const IndexPage = () => {
                 style={linkStyle}
                 href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
               >
-                {link.text}
+                {link.font}
               </a>
               {link.badge && (
                 <span style={badgeStyle} aria-label="New Badge">
