@@ -84,6 +84,7 @@ const links = [
     description:
       "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
     color: "#E95800",
+    font: "bold",
   },
   {
     text: "How to Guides",
@@ -91,6 +92,7 @@ const links = [
     description:
       "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
     color: "#1099A8",
+    font: "bold",
   },
   {
     text: "Reference Guides",
@@ -98,6 +100,7 @@ const links = [
     description:
       "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
     color: "#BC027F",
+    font: "bold",
   },
   {
     text: "Conceptual Guides",
@@ -105,6 +108,7 @@ const links = [
     description:
       "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
     color: "#0D96F2",
+    font: "bold",
   },
   {
     text: "Plugin Library",
@@ -112,6 +116,7 @@ const links = [
     description:
       "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
     color: "#8EB814",
+    font: "bold",
   },
   {
     text: "Build and Host",
@@ -120,14 +125,15 @@ const links = [
     description:
       "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
     color: "#663399",
+    font: "bold",
   },
 ]
-
+//define the name of the object(page) you'll export later
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
+      <h1 className="text-3xl font-bold underline">
+       Hey, we installed Gatsby
         <br />
         <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
       </h1>
@@ -144,6 +150,9 @@ const IndexPage = () => {
             {docLink.text}
           </a>
         </li>
+
+        //here we loop through the links array we created up there
+        
         {links.map(link => (
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
             <span>
